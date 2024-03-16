@@ -1,5 +1,5 @@
 # Go CKAN
-Go wrapper for the [CKAN API](https://docs.ckan.org/en/2.10/contents.html).   
+Go client for the [CKAN API](https://docs.ckan.org/en/2.10/contents.html).   
 Handles HTTP requests to the CKAN API, provides a structured response.  
 
 https://docs.ckan.org/en/2.10/api/
@@ -43,17 +43,17 @@ res, err := ckanClient.SearchResources(
 ```
 
 ### Endpoints
-| Method | Parameters | Return Type | Description |
-| --- | --- | --- | --- |
-| `SearchPackages` | `query map[string]string`, `sort string`, `limit int` | `PackageSearchResponse`, `error` | Searches for packages based on their metadata. |
-| `SearchResources` | `query map[string]string`, `sort string`, `limit int` | `ResourceSearchResponse`, `error` | Searches for resources based on their metadata. |
-| `RecentlyChangedPackagesActivityList` | None | `RecentActivityResponse`, `error` | Retrieves an activity stream of recently changed datasets on a site. |
-| `GetPackageList` | `sort string`, `limit int` | `PackageIDResponse`, `error` | Retrieves a list of all packages. |
-| `GetPackageIDList` | `sort string`, `limit int` | `[]string`, `error` | Retrieves a list of all package IDs. |
-| `GetPackageMetadata` | `packageID string` | `PackageMetadataResponse`, `error` | Retrieves metadata for a specific package. |
-| `GetResourceID` | `packageID string` | `string`, `error` | Retrieves the resource ID for a specific package. |
-| `GetResourceMetadata` | `resourceID string` | `ResourceMetadataResponse`, `error` | Retrieves metadata for a specific resource. |
-| `GetGroupList` | `sort string`, `limit int` | `GroupListResponse`, `error` | Retrieves a list of all groups. |
-| `GetGroupMetadata` | `groupID string` | `GroupMetadataResponse`, `error` | Retrieves metadata for a specific group. |
-| `GetTagList` | `sort string`, `limit int` | `TagListResponse`, `error` | Retrieves a list of all tags. |
-| `GetTagMetadata` | `tagName string` | `TagMetadataResponse`, `error` | Retrieves metadata for a specific tag. |
+| Method | Parameters | Description |
+| --- | --- | --- |
+| `SearchPackages` | `query map[string]string`, `sort string`, `limit int` | Searches for packages based on their metadata. |
+| `SearchResources` | `query map[string]string`, `sort string`, `limit int` | Searches for resources based on their metadata. |
+| `RecentlyChangedPackagesActivityList` | None | Retrieves an activity stream of recently changed datasets on a site. |
+| `GetPackageList` | `sort string`, `limit int` | Retrieves a list of all packages. |
+| `GetPackageIDList` | `sort string`, `limit int` | Retrieves a list of all package IDs. |
+| `GetPackageMetadata` | `packageID string` | Retrieves metadata for a specific package. |
+| `GetResourceID` | `packageID string` | Retrieves the resource ID for a specific package. |
+| `GetResourceMetadata` | `resourceID string` | Retrieves metadata for a specific resource. |
+| `GetGroupList` | `sort string`, `limit int` | Retrieves a list of all groups. |
+| `GetGroupMetadata` | `groupID string` | Retrieves metadata for a specific group. |
+| `GetTagList` | `sort string`, `limit int` | Retrieves a list of all tags. |
+| `GetTagMetadata` | `tagName string` | Retrieves metadata for a specific tag. |
