@@ -1,3 +1,3 @@
-module github.com/Ztkent/go-ckan
+module github.com/ztkent/go-ckan
 
-go 1.22.0
+go 1.23.0
